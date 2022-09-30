@@ -32,12 +32,46 @@ background-color: rgb(255, 253, 253);
      -14px -14px 18px  rgba(236, 191, 236, 0.2);
 
 }
+
+header{
+    position: absolute;
+    font-size: medium;
+    font-weight: 900;
+    text-transform: lowercase;
+    top: 10px;
+    color:  rgb(172, 41, 172);
+}
+select {
+    position: absolute;
+    margin: 10px;
+    padding:0.1rem ;
+    top: -22%;
+    background-color:purple ;
+    right: 0;
+    text-align: center;
+ font-size: larger;
+ border: none;
+ outline: none;
+}
+
+section::selection{
+    color: red;
+}
+
+option{
+    background-color: white;
+
+}
+.inn{
+    position: relative;
+}
 .function{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.4rem;
-    width: 100%;
+    width: 90%;
     height: 60vh;
+    
    }
 .function span {
     background-color: white;

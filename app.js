@@ -4,14 +4,23 @@ const numberkeys = keys.slice(2 , 16);
 let x = '*' 
   numberkeys.forEach( numberkeys => {
       numberkeys.addEventListener ( 'click' , function (e) {
-   var value = input[0].value += e.target.dataset.num;
+   input[0].value += e.target.dataset.num,
+   input[3].style.color = 'red'
   }
   )}) ;
+console.log(6+9)
 
-  keys[18].onclick = () => {
-    input[1].value = eval(input[0].value)
+  
+
+  keys[18].onclick = (cal) => {
+    if( input[0].value ===  '') {
+      input[1].value = '';
+    }
+    else {
+      input[1].value = eval(input[0].value);
+    }
   }
-  keys[18].addEventListener ('dblclick' , () => {
+  window.addEventListener ('dblclick' , () => {
     console.log('oka')
   })
 
