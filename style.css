@@ -79,16 +79,18 @@ option{
     height: 60vh;
     
    }
-.function span {
+.function button {
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(172, 41, 172, 0.5);
+    color: rgba(172, 41, 172);
     box-shadow: 3px 3px 10px #e0e0e0 , 
     -3px -3px 10px #ffff, -3px -3px 10px #e0e0e0 , 
     3px 3px 10px #ffff ;
     transition: all 300ms ease-in-out;
+    outline: none;
+    border: none;
 
 }
 
