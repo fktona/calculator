@@ -48,7 +48,7 @@ setTimeout(() => {
  if(values > 15){
  inputKeys.forEach(inputKeys => {
     input[0].style.fontSize = '38px'
-   inputKeys.disabled = 'red'
+   inputKeys.disabled = true
     
   });
   
