@@ -12,7 +12,7 @@ let inputKeys = keys.slice(3 , 17);
   } )}) ;
   
   
-      // CHANGING THE STYLE OF THE BUTTON
+      // c THE STYLE CHANGEF THE BUTTON
 
     keys.forEach(keys => {
       keys.addEventListener ('click' , () => { 
