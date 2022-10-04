@@ -41,6 +41,7 @@ header{
     float: right;
     margin: 2px;
     color:  rgb(172, 41, 172);
+    
 }
 select {
     position: relative;
@@ -54,9 +55,6 @@ select {
  color: white;
 }
 
-section::selection{
-    color: red;
-}
 
 option{
     background-color: purple;
@@ -69,6 +67,7 @@ option{
 
 .inn{
     position: relative;
+    
     
 }
 .function{
@@ -121,5 +120,6 @@ input{
     padding: none;
     height: 10vh;
     color: #ffff;
+    margin:0 ;
 }
 

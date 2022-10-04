@@ -1,19 +1,19 @@
- var uyu = document.querySelectorAll( '.function button')
-var keys = Array.from( document.querySelectorAll( '.function button'));
-var input = document.querySelectorAll( 'input');
-const numberkeys = keys.slice(2 , 16);
-let numberk = keys.slice(2 , 16);
+// declearing varaiables
+let keys = Array.from( document.querySelectorAll( '.function button'));
+let input = document.querySelectorAll( 'input');
+let inputKeys = keys.slice(3 , 17);
 
+// FUNCTION TO INPUT NUMBERS TO THE INPUT
 
-
-
-  numberkeys.forEach( numberkeys => { 
-      numberkeys.addEventListener ( 'click' , function  (e) {
+ inputKeys.forEach( inputKeys => { 
+     inputKeys.addEventListener ( 'click' , function  (e) {
    input[0].value += e.target.dataset.num;
-  
+
   } )}) ;
   
   
+      // CHANGING THE STYLE OF THE BUTTON
+
     keys.forEach(keys => {
       keys.addEventListener ('click' , () => { 
           keys.style.boxShadow = '2px 2px 10px #ac29ac80 ' ,
@@ -33,54 +33,62 @@ setTimeout(() => {
       } ) 
     });
 
-  keys[18].onclick = () => {
-    if( input[0].value ===  '') {
-      input[1].value = '';
-    }
-    else {
-      input[1].value = eval(input[0].value);
-      
-    }
-  }
+    // LIMITING LENGTH OF INPUT
 
-  keys[1].onclick = () => {
-    input[0].value = '';
-    input[1].value = '';
+  for (let i = 0  ; i < keys.length  ; i++) {
+           let element1 = keys[i]
+           
+           
+         element1.onclick = ()  => {
+                       
+          
+          let values = input[0].value.length;
+// condition to limit th input value
 
-  }
-/*  for (let i = 0; i < keys.length; i++) {
-    let element1 = keys[i]
-
-  element1.onclick = () => {
+ if(values > 15){
+ inputKeys.forEach(inputKeys => {
+    input[0].style.fontSize = '38px'
+   inputKeys.disabled = 'red'
     
-    keys[0].onclick = () => {
-      input[0].value = input[0].value.substr(0, input[0].value.length -1)
+  });
   
-    } 
-    
+ }
 
-    let values = input[0].value.length;
-    for (let i = 0 ; i < numberk.length; i++) {
-
-      keys[0].onclick = (e) => {
-        input[0].value = input[0].value.substr(0, input[0].value.length -1)
-    
-      } 
-      
-      
-     const element = numberk[i];
-     console.log(values)
-     if (values > 8   ){
-    element.disabled = true
-    keys[7].style.color = 'blue'
-   input[0].style.color = 'blue'
-     }
-     else {
-       input[0].style.color = 'red'
-     }
-     
-    }
-  }
+ else{
+  keys.forEach(inputKeys => {
+    inputKeys.disabled = false
+  });
   
-   }
- */
+ }
+
+// function for edit button
+
+ keys[0].onclick = () => {keys.forEach(element => {
+  element.disabled = false
+})
+  input[0].value = input[0].value.substr(0, input[0].value.length -1);
+  
+} }
+          
+          }
+          
+// equa to
+    
+          keys[18].onclick = () => {
+            if( input[0].value ===  '') {
+              input[1].value = '';
+            }
+            else {
+              input[1].value = eval(input[0].value);
+              
+            }
+          }
+
+          // clear
+          
+          keys[1].onclick = () => {
+            input[0].value = '';
+            input[1].value = '';
+          }
+          
+          
