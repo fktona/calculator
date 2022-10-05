@@ -3,6 +3,7 @@ let keys = Array.from( document.querySelectorAll( '.function button'));
 let input = document.querySelectorAll( 'input');
 let inputKeys = keys.slice(3 , 17);
 
+
 // FUNCTION TO INPUT NUMBERS TO THE INPUT
 
  inputKeys.forEach( inputKeys => { 
@@ -39,7 +40,7 @@ setTimeout(() => {
            let element1 = keys[i]
            
            
-         element1.onclick = ()  => {
+         element1.onclick = (e)  => {
                        
           
           let values = input[0].value.length;
@@ -55,10 +56,9 @@ setTimeout(() => {
  }
 
  else{
-  keys.forEach(inputKeys => {
-    inputKeys.disabled = false
-  });
-  
+
+e.preventDefault()
+
  }
 
 // function for edit button
@@ -72,19 +72,24 @@ setTimeout(() => {
           
           }
           
-// equa to
+                    // equal to
     
           keys[18].onclick = () => {
-            if( input[0].value ===  '') {
-              input[1].value = '';
-            }
+
+            try{
+            if( input[0].value ===  '')  throw input[1].value = '';
+          
             else {
               input[1].value = eval(input[0].value);
-              
             }
           }
+            catch(err){
+              null
+            }
+          
+          }
 
-          // clear
+                // clear
           
           keys[1].onclick = () => {
             input[0].value = '';
